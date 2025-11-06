@@ -20,4 +20,4 @@ elif avg > b:
 elif avg > c:
     print("%d is just higher than %d" %(avg,c))
 else:
-    print("invalid input")
+    print("invalid input") 
