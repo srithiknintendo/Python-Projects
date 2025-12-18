@@ -1,0 +1,10 @@
+import datetime
+current = datetime.datetime.now()
+print(current)
+today = datetime.date.today()
+print(today)
+print(today.year)
+print(today.month)
+print(today.day)
+format = current.strftime("%d-%m-%Y %H:%M:%S")
+print(format)
