@@ -1,27 +1,16 @@
-import java.util.Scanner;
+class Reverse:
+    def __init__(self, s=""):
+        self.s = s
 
-class Reverse {
-    String s;
+    def get_reverse(self):
+        return self.s[::-1]
 
-    // Constructor with default value
-    Reverse(String s) {
-        this.s = s;
-    }
 
-    // Method to return reversed string
-    String getReverse() {
-        String reversed = "";
-        for (int i = s.length() - 1; i >= 0; i--) {
-            reversed += s.charAt(i);
-        }
-        return reversed;
-    }
+# Take input from the user
+user_input = input("Enter a string: ")
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+# Create object of the class
+obj = Reverse(user_input)
 
-        // Take input from user
-        System.out.print("Enter a string: ");
-        String input = sc.nextLine();
-
-        // Create obje
+# Print reversed string
+print("Reversed string:", obj.get_reverse())
