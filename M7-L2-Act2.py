@@ -1,34 +1,35 @@
-from tkinter import*
-from datetime import date
-
+from tkinter import *
 root = Tk()
-root.title('Getting started with widgets')
-root.geometry('400x300')
+root.title('Login App')
+root.geometry("400x400")
 
-lbl = Label(text="Hey there", fg ="white",bg = "#072f5f",height =1, width = 300)
+frame = Frame(master=root,height = 200, width = 360, bg = "#d0efff")
 
-name_lbl = Label(text = 'Full name', bg= "#389503")
-name_entry = Entry()
+lbl1 = Label(frame, text = "full name",bg = "#3895D3", fg = 'white', width = 12)
+lbl2 = Label(frame, text = "Email Id",bg = "#3895D3", fg = 'white', width = 12)
+lbl3 = Label(frame, text = "Enter password",bg = "#3895D3", fg = 'white', width = 12)
+
+name_entry = Entry(frame)
+email_entry = Entry(frame)
+pass_entry = Entry(frame,show="*")
 
 def display():
     name = name_entry.get()
-    global message
-    message = "Welcome to the APP, today's date is:"
-    greet = "hello "+name+"\n"
+    greet = "Hey"+name
+    message = "\nCongratulationsfor new acc"
+    textbox.insert(END,greet)
+    textbox.insert(END,message)
+textbox = Text(bg = '#BEBEBE', fg = 'Black')
+btn = Button(text = "Create acc", command=display, bg = "Red")
 
-    text_box.insert(END, greet)
-    text_box.insert(END, message)
-    text_box.insert(END, date.today())
-
-text_box = Text(height=3)
-
-
-btn = Button(text = 'Begin', command=display, height = 1, bg= '#1261A0')
-
-lbl.pack()
-name_lbl.pack()
-name_entry.pack()
-btn.pack()
-text_box.pack()
+frame.place(x=20,y=0)
+lbl1.place(x=20,y=20)
+name_entry.place(x=150,y=20)
+lbl2.place(x=20,y=80)
+email_entry.place(x=150,y=80)
+lbl3.place(x=20,y=140)
+pass_entry.place(x=150,y=140)
+btn.place(x=130,y=210)
+textbox.place(y = 250)
 
 root.mainloop()
